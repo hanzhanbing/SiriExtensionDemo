@@ -47,6 +47,7 @@
     }
     return _sendPayView;
 }
+
 #pragma mark - INUIHostedViewControlling
 
 // 获取siri解析的意图，准备视图展示
@@ -89,4 +90,5 @@
 - (BOOL)displaysPaymentTransaction {
     return YES;
 }
+
 @end

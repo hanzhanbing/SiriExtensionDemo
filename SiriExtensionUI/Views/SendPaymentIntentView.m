@@ -74,8 +74,6 @@
     self.amountLabel.text = amount;
     // 转账备注
     self.commentLabel.text = [NSString stringWithFormat:@"备注:%@", comment];;
-
- 
 }
 
 - (UIView *)headView{

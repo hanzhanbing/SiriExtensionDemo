@@ -48,7 +48,7 @@
     [self addSubview:self.commentLabel];
 }
 
--(void)setIntent:(INSendMessageIntent *)intent {
+- (void)setIntent:(INSendMessageIntent *)intent {
     NSString *name = [[intent.recipients lastObject] displayName];
     NSString *content = intent.content;
     
@@ -131,6 +131,5 @@
     }
     return _commentLabel;
 }
-
 
 @end

@@ -90,6 +90,9 @@
 		7C1DFF511F14819C00DE994C /* SendPaymentIntentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendPaymentIntentView.m; sourceTree = "<group>"; };
 		7C1DFF521F14819C00DE994C /* SendPaymentIntentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendPaymentIntentView.h; sourceTree = "<group>"; };
 		7C1DFF541F14EE3200DE994C /* IMG_0009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0009.png; sourceTree = "<group>"; };
+		A06915B321F061120001686A /* SiriExtensionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriExtensionDemo.entitlements; sourceTree = "<group>"; };
+		A06915B421F0616B0001686A /* SiriExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriExtension.entitlements; sourceTree = "<group>"; };
+		A06915B521F061720001686A /* SiriExtensionUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriExtensionUI.entitlements; sourceTree = "<group>"; };
 		A516E14B1F13CF3A009C45CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57733C11F10D56C0051A75F /* SiriExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57733C51F10D56C0051A75F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 		A57733C31F10D56C0051A75F /* SiriExtensionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A06915B321F061120001686A /* SiriExtensionDemo.entitlements */,
 				A57734021F10DC620051A75F /* Model */,
 				A57733C71F10D56C0051A75F /* AppDelegate.h */,
 				A57733C81F10D56C0051A75F /* AppDelegate.m */,
@@ -225,6 +229,7 @@
 		A57733E01F10D7C30051A75F /* SiriExtension */ = {
 			isa = PBXGroup;
 			children = (
+				A06915B421F0616B0001686A /* SiriExtension.entitlements */,
 				A57733E11F10D7C30051A75F /* IntentHandler.h */,
 				A57733E21F10D7C30051A75F /* IntentHandler.m */,
 				A5FA41231F126622008F9539 /* SendMessageIntentHandler.h */,
@@ -247,6 +252,7 @@
 		A57733ED1F10D7C30051A75F /* SiriExtensionUI */ = {
 			isa = PBXGroup;
 			children = (
+				A06915B521F061720001686A /* SiriExtensionUI.entitlements */,
 				7C1DFF061F13836100DE994C /* Views */,
 				7C1DFF031F136DFD00DE994C /* IntentViewController.h */,
 				7C1DFF041F136DFD00DE994C /* IntentViewController.m */,
@@ -333,18 +339,33 @@
 				TargetAttributes = {
 					A57733C01F10D56C0051A75F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7LA46FVLRB;
+						DevelopmentTeam = K3A6XD8P7R;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A57733DE1F10D7C30051A75F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7LA46FVLRB;
+						DevelopmentTeam = K3A6XD8P7R;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A57733E81F10D7C30051A75F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7LA46FVLRB;
+						DevelopmentTeam = K3A6XD8P7R;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -516,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -558,7 +579,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -569,11 +590,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriExtensionDemo/SiriExtensionDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7LA46FVLRB;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				INFOPLIST_FILE = SiriExtensionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haofree.SiriExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlgcx.SiriDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -583,11 +605,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriExtensionDemo/SiriExtensionDemo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7LA46FVLRB;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				INFOPLIST_FILE = SiriExtensionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haofree.SiriExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlgcx.SiriDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -596,10 +619,11 @@
 		A57733FC1F10D7C30051A75F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 7LA46FVLRB;
+				CODE_SIGN_ENTITLEMENTS = SiriExtensionUI/SiriExtensionUI.entitlements;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				INFOPLIST_FILE = SiriExtensionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haofree.SiriExtensionDemo.SiriExtensionUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlgcx.SiriDemo.SiriExtensionUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -608,10 +632,11 @@
 		A57733FD1F10D7C30051A75F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 7LA46FVLRB;
+				CODE_SIGN_ENTITLEMENTS = SiriExtensionUI/SiriExtensionUI.entitlements;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				INFOPLIST_FILE = SiriExtensionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haofree.SiriExtensionDemo.SiriExtensionUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlgcx.SiriDemo.SiriExtensionUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -620,10 +645,11 @@
 		A57733FF1F10D7C30051A75F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 7LA46FVLRB;
+				CODE_SIGN_ENTITLEMENTS = SiriExtension/SiriExtension.entitlements;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				INFOPLIST_FILE = SiriExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haofree.SiriExtensionDemo.SiriExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlgcx.SiriDemo.SiriExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -632,10 +658,11 @@
 		A57734001F10D7C30051A75F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 7LA46FVLRB;
+				CODE_SIGN_ENTITLEMENTS = SiriExtension/SiriExtension.entitlements;
+				DEVELOPMENT_TEAM = K3A6XD8P7R;
 				INFOPLIST_FILE = SiriExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = haofree.SiriExtensionDemo.SiriExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlgcx.SiriDemo.SiriExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
