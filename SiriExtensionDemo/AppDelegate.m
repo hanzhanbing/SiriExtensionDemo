@@ -51,13 +51,15 @@
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return NO;
 }
-    
-- (BOOL)application:(UIApplication *)application
-   continueUserActivity:(NSUserActivity *)userActivity
- restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
     if ([userActivity.interaction.intent isKindOfClass:[INSendMessageIntent class]]) {
         INSendMessageIntent *intent = (INSendMessageIntent *)(userActivity.interaction.intent);
         NSLog(@"%@",[[intent.recipients lastObject] displayName]);
+    }
+    if ([userActivity.interaction.intent isKindOfClass:[INSetCarLockStatusIntent class]]) {
+        INSetCarLockStatusIntent *intent = (INSetCarLockStatusIntent *)(userActivity.interaction.intent);
+        NSLog(@"锁定、解锁命令：%@",intent.locked);
     }
     return YES;
 }

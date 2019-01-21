@@ -28,6 +28,7 @@
 			<array>
 				<string>INSendMessageIntent</string>
 				<string>INSendPaymentIntent</string>
+				<string>INSetCarLockStatusIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

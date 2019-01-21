@@ -23,6 +23,10 @@
 		7C1DFF501F147E6100DE994C /* IMG_0003.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1DFF481F147E6100DE994C /* IMG_0003.png */; };
 		7C1DFF531F14819C00DE994C /* SendPaymentIntentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DFF511F14819C00DE994C /* SendPaymentIntentView.m */; };
 		7C1DFF551F14EE3200DE994C /* IMG_0009.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1DFF541F14EE3200DE994C /* IMG_0009.png */; };
+		A06915B821F15A000001686A /* SetCarLockStatusIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A06915B721F15A000001686A /* SetCarLockStatusIntentHandler.m */; };
+		A06915BB21F164F30001686A /* CarInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A06915BA21F164F30001686A /* CarInfoModel.m */; };
+		A06915BC21F164F30001686A /* CarInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A06915BA21F164F30001686A /* CarInfoModel.m */; };
+		A06915BD21F1652B0001686A /* CarInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A06915BA21F164F30001686A /* CarInfoModel.m */; };
 		A516E14C1F13CF3A009C45CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A516E14B1F13CF3A009C45CC /* Assets.xcassets */; };
 		A532B0511F1140790038C5AA /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57734041F10DC8A0051A75F /* UserInfoModel.m */; };
 		A532B0521F1140820038C5AA /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57734041F10DC8A0051A75F /* UserInfoModel.m */; };
@@ -93,6 +97,10 @@
 		A06915B321F061120001686A /* SiriExtensionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriExtensionDemo.entitlements; sourceTree = "<group>"; };
 		A06915B421F0616B0001686A /* SiriExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriExtension.entitlements; sourceTree = "<group>"; };
 		A06915B521F061720001686A /* SiriExtensionUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriExtensionUI.entitlements; sourceTree = "<group>"; };
+		A06915B621F159FF0001686A /* SetCarLockStatusIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetCarLockStatusIntentHandler.h; sourceTree = "<group>"; };
+		A06915B721F15A000001686A /* SetCarLockStatusIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetCarLockStatusIntentHandler.m; sourceTree = "<group>"; };
+		A06915B921F164F30001686A /* CarInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarInfoModel.h; sourceTree = "<group>"; };
+		A06915BA21F164F30001686A /* CarInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarInfoModel.m; sourceTree = "<group>"; };
 		A516E14B1F13CF3A009C45CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A57733C11F10D56C0051A75F /* SiriExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57733C51F10D56C0051A75F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -236,6 +244,8 @@
 				A5FA41211F126622008F9539 /* SendMessageIntentHandler.m */,
 				A5FA41241F126622008F9539 /* SendPaymentIntentHandler.h */,
 				A5FA41221F126622008F9539 /* SendPaymentIntentHandler.m */,
+				A06915B621F159FF0001686A /* SetCarLockStatusIntentHandler.h */,
+				A06915B721F15A000001686A /* SetCarLockStatusIntentHandler.m */,
 				A57733E41F10D7C30051A75F /* Info.plist */,
 			);
 			path = SiriExtension;
@@ -267,6 +277,8 @@
 			children = (
 				A57734031F10DC8A0051A75F /* UserInfoModel.h */,
 				A57734041F10DC8A0051A75F /* UserInfoModel.m */,
+				A06915B921F164F30001686A /* CarInfoModel.h */,
+				A06915BA21F164F30001686A /* CarInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -435,6 +447,7 @@
 				A57733CC1F10D56C0051A75F /* ViewController.m in Sources */,
 				A57733C91F10D56C0051A75F /* AppDelegate.m in Sources */,
 				A57734051F10DC8A0051A75F /* UserInfoModel.m in Sources */,
+				A06915BB21F164F30001686A /* CarInfoModel.m in Sources */,
 				A57733C61F10D56C0051A75F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,10 +456,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06915BC21F164F30001686A /* CarInfoModel.m in Sources */,
 				A532B0511F1140790038C5AA /* UserInfoModel.m in Sources */,
 				A5FA41261F126622008F9539 /* SendPaymentIntentHandler.m in Sources */,
 				A5FA41251F126622008F9539 /* SendMessageIntentHandler.m in Sources */,
 				A57733E31F10D7C30051A75F /* IntentHandler.m in Sources */,
+				A06915B821F15A000001686A /* SetCarLockStatusIntentHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06915BD21F1652B0001686A /* CarInfoModel.m in Sources */,
 				A532B0521F1140820038C5AA /* UserInfoModel.m in Sources */,
 				7C1DFF051F136DFD00DE994C /* IntentViewController.m in Sources */,
 				7C1DFF091F13839800DE994C /* SendMessageIntentView.m in Sources */,
