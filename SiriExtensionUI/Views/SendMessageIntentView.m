@@ -62,9 +62,8 @@
     // 发消息目标
     if (name.length == 0) {
         self.targetUserLabel.text = [NSString stringWithFormat:@"发消息给\"谁?\""];
-    }else {
+    } else {
         self.targetUserLabel.text = [NSString stringWithFormat:@"发消息给\"%@\"", name];
-
     }
     // 消息内容
     self.commentLabel.text = content;
